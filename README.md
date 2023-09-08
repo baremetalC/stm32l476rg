@@ -23,11 +23,22 @@ These are the codes I wrote while trying to learn Embedded Programming. The boar
 - An interrupt is sent out at each overflow of the counter of tim6 to toggle the led
 
 
-
 ## blinky_usart.c
 
 - Here the usart is used to communicate with the host device
 - The user can input on to turn on the light and of to turn of the light
 - Tera term as terminal and baud rate 115200 -> SystemClock/115200
 
-Note: uint8_t is used from stdint which is unsigned char. I noticed it has not been added as the header file. It is because I am using Keil5 and it does it by default.
+
+## blinky_i2c.c
+
+- Here the i2c is used to communicate with the oled ssd1306 display
+- The user can input on to turn on the light and display ON on the oled of to turn off the light and display OFF on the oled
+
+
+## Note
+
+- These codes have errors and can only be used for learning the very basics
+- There could be better configuration options and better way of writing the code itself
+- uint8_t is used from stdint which is unsigned char. I noticed it has not been added as the header file.
+- I am using Keil5 and certain headers file are added by default so take care to add by self if not using keil
